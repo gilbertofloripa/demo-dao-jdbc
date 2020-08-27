@@ -17,9 +17,15 @@ public class Program {
 		Seller seller = sellerDao.findById(3); // Todos o vendedor id 3
 		System.out.println(seller);
 		
-		System.out.println("\n===== Teste findId =====");
+		System.out.println("\n===== Teste findByDepartment =====");
 		Department department = new Department(2, null);
 		List<Seller> list = sellerDao.findByDepartment(department);
+		for (Seller obj : list) {
+			System.out.println(obj);
+		}
+
+		System.out.println("\n===== Teste findAll =====");
+		list = sellerDao.findAll();
 		for (Seller obj : list) {
 			System.out.println(obj);
 		}
