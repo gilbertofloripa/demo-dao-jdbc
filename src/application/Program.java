@@ -13,8 +13,8 @@ public class Program {
 
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
+		System.out.println("===== Teste findId =====");
 		Seller seller = sellerDao.findById(3); // Todos o vendedor id 3
-		
 		System.out.println(seller);
 		
 	}
